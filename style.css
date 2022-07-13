@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;     
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("https://i.pinimg.com/originals/40/ff/d5/40ffd5398db5f6dff8ea5b57e86aff64.png");
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.header{
+    margin: 0 1rem 5rem 1rem;
+    padding: 1.8rem 18rem 1.8rem 18rem;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(172, 31, 31);
+    align-self: center;
+    border-radius: 8px;
+}
+.header h1{
+    color: rgb(255, 255, 255);
+    justify-content: baseline;
+}
+
+.tela{
+    margin: 3rem 0 3rem 0;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 80vh;
+    flex-direction: column;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+}
+
+.programas{
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    background-color: rgb(190, 113, 113);
+}
+
+.programas h2{
+    padding: 2rem;
+}
+.programas button{
+    padding: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+.changeMode{
+    margin: 5rem 1rem 0 1rem;
+    border: 10rem;
+    padding: auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;    
+}
+.changeMode button{
+    padding: 4px;
+    border-radius: 10px;
+    color: whitesmoke;
+    background-color: rgb(42, 59, 2);
+}
+
+
+/*
+DARK MODE MODIFICADO 
+*/
+
+.dark-mode {
+    background-image: url("https://preview.redd.it/ourbadpw8fx51.jpg?auto=webp&s=a1ecb08d034b95ed699cd5d9cc7516833247e259");
+}
+
+.dark-mode .header{
+    background-color: rgb(46, 85, 20);
+}
+
+.dark-mode .programas{
+    background-color: rgb(137, 190, 113);
+}
+
+.dark-mode .changeMode button{
+    background-color: rgb(59, 2, 2);
+}
