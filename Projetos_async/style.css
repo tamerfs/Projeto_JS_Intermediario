@@ -2,7 +2,7 @@
 
 body {
 	display: flex;
-	align-items: center;
+	align-items: top;
 	justify-content: center;
 	font-family: 'Quicksand', sans-serif;
 	height: 100vh;

@@ -1,29 +1,31 @@
-const BASE_URL ='https://thatcopy.pw/catapi/rest/';
+const BASE_URL = 'https://api.thecatapi.com/v1/images/search';
 
 const getCats = async ()=>{
-    console.log("getCats foi chamado")
+    try {
+
     const data = await fetch(BASE_URL)
-    .then((result) => result.json())
-    .catch((err) => console.log(err))
-    console.log(data.webpurl)
-    return data.url;
+        .then((result) => result.json())
+        .catch((err) => console.log(err))
+    console.log(data)
+    return data
+        } catch (error) {
+            console.log(error.message)
+        }
 };
 
 const imgCat = document.getElementsByTagName('img')[0];
 const loadImg = async() =>{
-    console.log("loadImg foi chamado")
-    imgCat.src =  await getCats();
+    let objeto =  await getCats();
+    var result = objeto.map(function(obj) {
+        return Object.keys(obj).map(function(key) {
+            return obj[key];
+        });
+    });
+    imgCat.src = result[0][1];
 }
 
 const btnCat = document.getElementById("mudar-gato");
 btnCat.addEventListener('click',loadImg)
 
-// try {
-    //     console.log("getCats foi chamado")
-    //     const data = await fetch(BASE_URL);
-    //     const json = await data.json();
-    //     console.log(json.webpurl)
-    //     return json.webpurl;
-//     } catch (error) {
-    //         console.log(error.message)
-    //     }
+
+
